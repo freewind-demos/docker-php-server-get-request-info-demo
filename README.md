@@ -1,4 +1,8 @@
-Docker PhpMyAdmin MySql Demo
-==============================
+Docker Php Apache Server  Demo
+=============================
 
-使用`phpMyAdmin`来管理另一个docker里的`mysql`
+使用docker来运行一个支持php的apache server.
+
+```
+npm run up
+```

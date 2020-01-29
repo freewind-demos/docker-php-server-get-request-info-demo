@@ -1,17 +1,8 @@
 version: '3'
 services:
-  mysql:
-    image: mysql/mysql-server:5.6.45
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_ROOT_HOST=%
-      - MYSQL_DATABASE=mydb
-  phpMyAdmin:
-    image: phpmyadmin/phpmyadmin:5
-    environment:
-      - MYSQL_ROOT_PASSWORD=123456
+  php:
+    image: php:7.4.2-apache
     ports:
-      - 20080:80
-    links:
-      - mysql:db
-
+    - 10080:80
+    volumes:
+    - ./var/www/html:/var/www/html
